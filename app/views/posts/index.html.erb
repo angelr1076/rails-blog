@@ -1,0 +1,13 @@
+<h1>Blog Posts</h1>
+
+<div id='blogs-index'>
+    <% @posts.each do |post| %>
+    <li>
+    <p>Blog Post: <%= link_to(post.body, post) %> </p>
+    <p>By: <%= post.user.username %> </p>
+    </li>
+  <% end %>
+
+  <p>
+    <%= link_to('Create Post', new_post_path)%>
+  </p>
