@@ -74,6 +74,13 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def check_auth
+    if session[:user_id] != @post.user_id
+      flash[:notice] = "You can't edit this post"
+      redirect_to posts_path
+  end
+end
+
   private 
   
   def post_params
