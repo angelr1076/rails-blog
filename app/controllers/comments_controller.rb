@@ -5,14 +5,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = comment.create(post_params)
+    @comment = Comment.create(comment_params)
     @comment.user_id = session[:user_id]
     if @comment.save
       flash[:notice] = "commment created."
       redirect_to '/posts'
     else
       flash[:error] = "Error creating comment."
-      render '/posts/new'
+      redirect_to '/posts'
     end
   end
 
@@ -51,6 +51,6 @@ end
   private 
   
   def comment_params
-    params.require(:comment).permit(:user_id, :post_id)
+    params.require(:comment).permit(:body, :user_id, :post_id)
   end
 end
