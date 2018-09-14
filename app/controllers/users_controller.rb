@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 # POST /users 
 # users#create
 def create
-  user = User.create(params[:user])
+  user = User.create(user_params)
   flash[:notice] = "User created."
   redirect_to user
 end
@@ -35,7 +35,7 @@ end
   # users#update
   def update
     user = User.find(params[:id])
-    user.update(params[:user])
+    user.update(user_params)
     flash[:notice] = "User updated."
     redirect_to user
   end
@@ -46,5 +46,11 @@ end
     User.find(params[:id]).destroy
     flash[:notice] = "User deleted."
     redirect_to users_path
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :password)
   end
 end

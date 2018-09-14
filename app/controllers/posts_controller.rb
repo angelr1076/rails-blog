@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   # posts#create
   def create
     @post = Post.create(post_params)
-    # @post.user_id = session[:user_id]
+    @post.user_id = session[:user_id]
     if @post.save
       flash[:notice] = "Post created."
       redirect_to '/posts'
@@ -53,17 +53,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def create
-    @post = Post.create(post_params)
-    @post.user_id = session[:user_id]
-    if @post.save
-      flash[:notice] = "Post created."
-      redirect_to '/posts'
-    else
-      flash[:error] = "Error creating post."
-      render '/posts/new'
-    end
-  end
   # DELETE /posts/:id
   # delete a tweet
   # need authorization
@@ -74,12 +63,12 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-#   def check_auth
-#     if session[:user_id] != @post.user_id
-#       flash[:notice] = "You can't edit this post"
-#       redirect_to posts_path
-#   end
-# end
+  def check_auth
+    if session[:user_id] != @post.user_id
+      flash[:notice] = "You can't edit this post"
+      redirect_to posts_path
+  end
+end
 
   private 
   

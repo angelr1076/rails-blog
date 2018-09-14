@@ -1,6 +1,6 @@
 <%# show all users %>
-</br>
-<%= @user.username %>
 
-<%= link_to("Edit User", edit_user_path(@user)) %>
-<%= link_to("Delete User", @user, method: 'delete') %>
+    <%= @user.username %>
+
+    <%= link_to("Edit User", edit_user_path(@user)) %>
+    <%= link_to("Delete User", @user, method: 'delete') %>
