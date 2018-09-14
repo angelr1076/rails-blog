@@ -22,6 +22,7 @@ class CommentsController < ApplicationController
 
   def show 
     @comment = Comment.find(params[:id])
+    # @comment = Comment.where(session[:user_id])
   end
 
   def update
