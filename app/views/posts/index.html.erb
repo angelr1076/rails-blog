@@ -2,9 +2,9 @@
 
 <div id='blogs-index'>
     <% @posts.each do |post| %>
-    <li>
+    <li class="all-posts">
     <p>Blog Post: <%= link_to(post.body, post) %> </p>
-    <p>By: <%= post.user.username %> </p>
+    <p>By: <%= post.user.username %>  </p>
     </li>
   <% end %>
 

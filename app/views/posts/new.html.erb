@@ -1,6 +1,6 @@
 <%# create posts %>
 <%= form_for @post do |f| %>
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "text-area" %>
     <%= f.submit %>
 <% end %>

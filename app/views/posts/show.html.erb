@@ -1,0 +1,17 @@
+<%# show all posts %>
+</br>
+<div id="single-post">
+<h1>User - <%= @post.user.username %></h1>
+
+<h2>Post -  <%= @post.body %> </h2>
+
+<% if @user = @current_user %>
+
+<%= link_to("Edit Post", edit_post_path(@post)) %>
+<%= link_to("Delete Post", @post, method: 'delete') %>
+
+<% else %>
+<%= "You don't have access to delete this post" %>
+
+<% end %>
+</div>

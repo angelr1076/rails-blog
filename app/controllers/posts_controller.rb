@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   # list all posts 
   # posts#index
   def index
-    # left off here. created posts controllers, migrated, made model and added an erb
     @posts = Post.all 
   end
 
@@ -12,8 +11,8 @@ class PostsController < ApplicationController
   # posts#create
   def create
     @post = Post.create(post_params)
-    @post.user_id = session[:user_id]
-    if @post.create
+    # @post.user_id = session[:user_id]
+    if @post.save
       flash[:notice] = "Post created."
       redirect_to '/posts'
     else
@@ -41,6 +40,10 @@ class PostsController < ApplicationController
   # need authorization
   # posts#update
   def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    flash[:notice] = "Post updated."
+    redirect_to '/posts'
   end
 
   #GET /posts/:id/edit
@@ -48,8 +51,6 @@ class PostsController < ApplicationController
   # need authorization
   def edit
     @post = Post.find(params[:id])
-    @post.user_id = session[:user_id]
-
   end
 
   def create
@@ -68,18 +69,17 @@ class PostsController < ApplicationController
   # need authorization
   # posts#destroy
   def destroy
+    Post.find(params[:id]).destroy
+    flash[:notice] = "Post deleted."
+    redirect_to posts_path
   end
 
-  def get_post
-    @post = Post.find(params[:id])
-  end
-
-  def check_auth
-    if session[:user_id] != @post.user_id
-      flash[:notice] = "You can't edit this post"
-      redirect_to posts_path
-  end
-end
+#   def check_auth
+#     if session[:user_id] != @post.user_id
+#       flash[:notice] = "You can't edit this post"
+#       redirect_to posts_path
+#   end
+# end
 
   private 
   
