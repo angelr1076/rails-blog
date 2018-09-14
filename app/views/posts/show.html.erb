@@ -5,9 +5,11 @@
 
 <h2>Post -  <%= @post.body %> </h2>
 
-<h3>Comment - <%= @post.comments.reverse.each do |c| %> </h3> 
+<h3>Comment - <% @post.comments.reverse.each do |c| %> </h3> 
 
-<%= c.body %>
+    <p><%= c.user.username %></p>
+
+    <p><%= c.body %> </p>
 
 <% end %>
 
