@@ -12,20 +12,22 @@
   </head>
 
   <body>
-    <h4><% if session[:user_id] %></h4>
-        <h3 id="logged-in"> <%= User.find(session[:user_id]).username %>, you are currently signed in </h3>
-        <h4> <% else %></h4>
-        <h4 id="logged-out"> Please login </h4>
-      <% end %>
-   
-    <nav class="nav">
-  <a class="nav-link active" href="/">Home</a>
-  <a class="nav-link" href="/posts">Posts</a>
-  <a class="nav-link" href="/signin">Sign In</a>
-  <a class="nav-link" href="/signout">Sign Out</a>
-</nav>
-  </br>
-    <%= flash[:notice] if flash[:notice] %>
-    <%= yield %>
+      <div id="login-message">
+        <h4><% if session[:user_id] %></h4>
+          <h3 id="logged-in"> <%= User.find(session[:user_id]).username %>, you are currently signed in </h3>
+          <% else %>
+          <h4 id="logged-out"> Please login </h4>
+        <% end %>
+      </div>
+    
+        <nav class="nav">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/posts">Posts</a>
+          <a class="nav-link" href="/signin">Sign In</a>
+          <a class="nav-link" href="/signout">Sign Out</a>
+        </nav>
+      </br>
+      <%= flash[:notice] if flash[:notice] %>
+      <%= yield %>
   </body>
 </html>

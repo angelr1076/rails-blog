@@ -1,20 +1,24 @@
 <%# show all posts %>
 </br>
+
 <div id="single-post">
-<h1>User - <%= @post.user.username %></h1>
+    <h1>User - <%= @post.user.username %></h1>
 
-<h2>Post -  <%= @post.body %> </h2>
+        <%= link_to("Edit Post", edit_post_path(@post)) %>
+        <%= link_to("Delete Post", @post, method: 'delete') %>
+        <%= link_to("Add Comment", new_comment_path(post_id: @post.id)) %>
 
-<h3>Comment - <% @post.comments.reverse.each do |c| %> </h3> 
+        <h2>Post -  <%= @post.body %> </h2>
+</div>
 
-    <p><%= c.user.username %></p>
 
-    <p><%= c.body %> </p>
+    <h3><% @post.comments.reverse.each do |c| %> </h3> 
+        <div id="single-comment">
+            <h4>Comment</h4>
+            <h5>From - <%= c.user.username %></h5>
 
-<% end %>
-
-<%= link_to("Edit Post", edit_post_path(@post)) %>
-<%= link_to("Delete Post", @post, method: 'delete') %>
-<%= link_to("Add Comment", new_comment_path(post_id: @post.id)) %>
+            <h6><%= c.body %> </h6>
+        </div>
+    <% end %>
 
 </div>
