@@ -1,9 +1,10 @@
-<h1>Blog Posts</h1>
+<div id="blog-posts">
+  <h1>Blog Posts</h1>
 
-  <p>
-    <%= link_to('Create Post', new_post_path)%>
-  </p>
-
+    <p>
+      <%= link_to('Create Post', new_post_path)%>
+    </p>
+</div>
   <div id='blogs-index'>
     <% @posts.each do |post| %>
     <li class="all-posts">

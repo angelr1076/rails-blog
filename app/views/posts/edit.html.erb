@@ -1,6 +1,9 @@
 <%# edit posts %>
-<%= form_for @post do |f| %>
-    <%= f.label :body %>
-    <%= f.text_field :body %>
-    <%= f.submit %>
-<% end %>
+<div id="post-form">
+    <%= form_for @post do |f| %>
+        <%= f.label :body %>
+        <%= f.text_field :body %>
+        </br>
+        <%= f.submit %>
+    <% end %>
+</p>

@@ -1,6 +1,8 @@
-<%= form_for @comment do |f| %>
-    <%= f.label :body %>
-    <%= f.text_area :body, class: "text-area" %>
-    <%= f.hidden_field :post_id %>
-    <%= f.submit %>
-<% end %>
+<div id="comment-form">
+    <%= form_for @comment do |f| %>
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "text-area" %>
+        <%= f.hidden_field :post_id %>
+        <%= f.submit %>
+    <% end %>
+</div>
