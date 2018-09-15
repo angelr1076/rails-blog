@@ -1,8 +1,11 @@
 <%# home page %>
-<h1>The Blog</h1>
-  <p>
-    <%= link_to('Create User', new_user_path)%>
-  </p>
+<div id="title">
+  <h1>DoggA-BloggA</h1>
+    <h4>Where dogs go to gossip about their owners</h4>
+      <p>
+        <%= link_to('Create User', new_user_path)%>
+      </p>
+</div>
 <div id="all-users">
   <h3>All users:</h3>
       <% @users.each do |user| %>
