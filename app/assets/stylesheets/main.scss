@@ -34,6 +34,17 @@ body {
     text-align: center;
 }
 
+#flash-notice {
+    background: rgb(202, 122, 212);
+    font-family: 'Noto Serif KR', sans-serif;
+    height: auto;
+    width: 200px;
+    text-align: center;
+    margin-left: 40%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
 #blog-posts, #post-form, #comment-form {
     background: orange;
 }
