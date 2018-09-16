@@ -24,8 +24,12 @@ class CommentsController < ApplicationController
     end
   end
 
+  # def edit
+  #   @post = Post.find(params[:id])
+  # end
+
   def edit
-    @post = Post.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def update
@@ -36,17 +40,17 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:comment_id])
+    @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to '/posts'
   end
 
-#   def check_auth
-#     if session[:user_id] != @post.user_id
-#       flash[:notice] = "You can't edit this comment"
-#       redirect_to posts_path
-#   end
-# end
+  def check_auth
+    if session[:user_id] != @post.user_id
+      flash[:notice] = "You can't edit this comment"
+      redirect_to posts_path
+  end
+end
 
   private 
   

@@ -1,8 +1,8 @@
 <%# show all posts %>
 
 <div id="single-post">
-    <h1>User - <%= @post.user.username %></h1>
-        <h2>Post -  <%= @post.body %> </h2>
+        <h1><strong> Post - </strong> <%= @post.body %> </h1>
+        <h3>User - <strong><%= @post.user.username %></strong> </h3>
 
         <%= link_to("Edit Post", edit_post_path(@post)) %>
         </br>
@@ -20,9 +20,9 @@
                 <h6><%= c.body %> </h6>
 
                 </br>
-                <%#<%= link_to("Edit Comment", edit_comment_path(@post.id)) %>
+                <%= link_to("Edit Comment", edit_comment_path(c.id)) %>
                 </br>
-                <%#<%= link_to("Delete Comment", comment_path(@post.id), method: :delete) %>
+                <%= link_to("Delete Comment", comment_path(c.id), method: :delete) %>
             </div>
         <% end %>
     </div>

@@ -67,12 +67,12 @@ end
     redirect_to posts_path
   end
 
-#   def check_auth
-#     if session[:user_id] != @post.user_id
-#       flash[:notice] = "You can't edit this post"
-#       redirect_to posts_path
-#   end
-# end
+  def check_auth
+    if session[:user_id] != @post.user_id
+      flash[:notice] = "You can't edit this post"
+      redirect_to posts_path
+  end
+end
 
   private 
   
