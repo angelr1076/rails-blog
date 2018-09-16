@@ -1,11 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Dogga-Blogga! A place where pets can gripe about their owners and what's new in the neighborhood. 
 
-Things you may want to cover:
+Create dog users, edit them or delete them from the database.
+
+CRUD all users/posts and comments on posts.
+
+Feel free to play around and have fun with the site. You can view some of the silly posts and comments our pets exchanged in the database. 
 
 * Ruby version
+2.5.1
 
 * System dependencies
 
@@ -21,4 +25,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
+rails s
+localhost:3000
 * ...
