@@ -2,6 +2,11 @@
 
 Welcome to Dogga-Blogga! A place where pets can gripe about their owners and what's new in the neighborhood. 
 
+Create dog users, edit them or delete them from the database.
+
+CRUD all users/posts and comments on posts.
+
+Feel free to play around and have fun with the site. You can view some of the silly posts and comments our pets exchanged in the database. 
 
 * Ruby version
 2.5.1
