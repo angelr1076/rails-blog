@@ -1,9 +1,7 @@
 <%# show all posts %>
-</br>
 
 <div id="single-post">
     <h1>User - <%= @post.user.username %></h1>
-
         <h2>Post -  <%= @post.body %> </h2>
 
         <%= link_to("Edit Post", edit_post_path(@post)) %>
@@ -15,12 +13,16 @@
 
 
     <h3><% @post.comments.reverse.each do |c| %> </h3> 
-        <div id="single-comment">
-            <h4>Comment</h4>
-            <h5>From - <%= c.user.username %></h5>
+            <div id="single-comment">
+                <h4>Comment</h4>
+                <h5>From - <%= c.user.username %></h5>
 
-            <h6><%= c.body %> </h6>
-        </div>
-    <% end %>
+                <h6><%= c.body %> </h6>
 
-</div>
+                </br>
+                <%#<%= link_to("Edit Comment", edit_comment_path(@post.id)) %>
+                </br>
+                <%#<%= link_to("Delete Comment", comment_path(@post.id), method: :delete) %>
+            </div>
+        <% end %>
+    </div>

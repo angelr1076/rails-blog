@@ -1,10 +1,9 @@
 body {
-    font-family: 'Noto Serif KR', sans-serif;
     margin-left: 15% !important;
     margin-right: 20% !important;
     display: block;
     width: 990px;
-    background: url("http://disruptivedog.com/wp-content/uploads/2017/08/03_DribbbleDogIllustrations_Frenchies.png");
+    background: url("https://res.cloudinary.com/angelrodriguez/image/upload/v1537011402/doggies.jpg");
     background-size: cover;
 }
 
@@ -17,6 +16,7 @@ body {
     height: auto;
     width: 500px;
     opacity: 0.8px;
+    box-shadow: 4px 5px 3px rgb(128, 126, 126);
 }
 
 .username {
@@ -32,6 +32,7 @@ body {
     margin-top: 10px;
     margin-left: 25%;
     text-align: center;
+    box-shadow: 4px 5px 3px rgb(128, 126, 126);
 }
 
 #flash-notice {
@@ -43,6 +44,7 @@ body {
     margin-left: 40%;
     margin-bottom: 10px;
     border-radius: 5px;
+    box-shadow: 4px 5px 3px rgb(128, 126, 126);
 }
 
 #blog-posts, #post-form, #comment-form {
@@ -52,21 +54,37 @@ body {
 li, .nav-link {
     list-style-type: none;
     text-decoration: none;
+    margin: 5px;
     color: rgb(2, 2, 2);
+}
+
+.nav-link {
+    margin-left: 5%;
 }
 
 a {
     color: rgb(95, 6, 6) !important;
-    background: rgb(113, 113, 156);
+    // background: rgb(113, 113, 156);
 }
 
 .all-posts, #all-users, #single-post, #single-comment, #user-form {
-    border: 5px solid black;
+    border: 5px dashed black;
     border-radius: 5px;
     background: rgb(236, 5, 132);
-    opacity: 0.9;
     margin: 10px;
     padding: 10px;
+    box-shadow: 4px 5px 3px rgb(128, 126, 126);
+}
+
+#single-comment {
+    border: 5px dotted black;
+    background: rgb(42, 106, 167);
+    width: 500px;
+    margin-left: 25%;
+}
+
+#all-users {
+    text-align: center;
 }
 
 .text-area {

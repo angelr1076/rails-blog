@@ -14,11 +14,6 @@ class SessionsController < ApplicationController
         redirect_to new_session_path
       end
     end
-
-    # def signed_in
-    #   session[:user_id] = user.id
-    #   flash[:notice] = "You are signed in"
-    # end
   
     def destroy
       session[:user_id] = nil

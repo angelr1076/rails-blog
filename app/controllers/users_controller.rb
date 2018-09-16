@@ -43,10 +43,16 @@ end
   #DELETE /users/:id
   # users#destroy
   def destroy
-    User.find(params[:id]).destroy
+      @user = User.find(params[:id])
+      @user.posts.each do |post|
+      @user.comments.destroy_all
+      @user.posts.destroy_all
+      @user.destroy
+      session[:user_id] = nil
     flash[:notice] = "User deleted."
     redirect_to users_path
   end
+end
 
   private
 

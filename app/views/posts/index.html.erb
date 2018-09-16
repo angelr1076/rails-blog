@@ -6,8 +6,9 @@
     </p>
 </div>
   <div id='blogs-index'>
-    <% @posts.each do |post| %>
+    <% @posts.reverse.each do |post| %>
     <li class="all-posts">
+    <p>Click on post to view or add comments</p>
     <p>Blog Post: <%= link_to(post.body, post) %> </p>
     <p>By: <%= post.user.username %>  </p>
     

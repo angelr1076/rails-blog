@@ -6,6 +6,13 @@ class PostsController < ApplicationController
     @posts = Post.all 
   end
 
+ #GET /posts/new
+ # show a new post form 
+ # posts#create
+ def new
+  @post = Post.new
+end
+
 #POST /posts
   # create a new post 
   # posts#create
@@ -21,29 +28,11 @@ class PostsController < ApplicationController
     end
   end
 
- #GET /posts/new
- # show a new post form 
- # posts#create
-  def new
-    @post = Post.new
-  end
-
   #GET /posts/:id
   # show a single post
   # posts#show
   def show 
     @post = Post.find(params[:id])
-  end
-
-  #PUT /posts/:id
-  # update a post
-  # need authorization
-  # posts#update
-  def update
-    @post = Post.find(params[:id])
-    @post.update(post_params)
-    flash[:notice] = "Post updated."
-    redirect_to '/posts'
   end
 
   #GET /posts/:id/edit
@@ -53,22 +42,37 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  #PUT /posts/:id
+  # update a post
+  # need authorization
+  # posts#update
+  def update
+    post = Post.find(params[:id])
+    if post.update(post_params)
+      flash[:notice] = "Post updated."
+      redirect_to '/posts'
+    else
+      flash[:notice] = "Hey, there was an error creating your post. Try again."
+    end
+  end
+
   # DELETE /posts/:id
   # delete a tweet
   # need authorization
   # posts#destroy
   def destroy
-    Post.find(params[:id]).destroy
+    @post = Post.find(params[:id])
+    @post.destroy
     flash[:notice] = "Post deleted."
     redirect_to posts_path
   end
 
-  def check_auth
-    if session[:user_id] != @post.user_id
-      flash[:notice] = "You can't edit this post"
-      redirect_to posts_path
-  end
-end
+#   def check_auth
+#     if session[:user_id] != @post.user_id
+#       flash[:notice] = "You can't edit this post"
+#       redirect_to posts_path
+#   end
+# end
 
   private 
   
