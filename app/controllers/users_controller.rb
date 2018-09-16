@@ -44,6 +44,8 @@ end
   # users#destroy
   def destroy
       @user = User.find(params[:id])
+      # Destroy all posts and comments. If this isn't attached, 
+      # checking posts belonging to deleted users breaks the session
       @user.posts.each do |post|
       @user.comments.destroy_all
       @user.posts.destroy_all

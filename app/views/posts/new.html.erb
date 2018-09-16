@@ -1,9 +1,2 @@
 <%# create posts %>
-<div id="post-form">
-    <%= form_for @post do |f| %>
-        <%= f.label :body %>
-        <%= f.text_area :body, class: "text-area" %>
-        </br>
-        <%= f.submit %>
-    <% end %>
-</div>
+<%= render "post_form" %>

@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
     def new
     end
   
+    # Save a current session and remain logged in until destroy
     def create
       user = User.where(username: params[:username], password: params[:password]).first
   
@@ -15,6 +16,7 @@ class SessionsController < ApplicationController
       end
     end
   
+    # End a login session
     def destroy
       session[:user_id] = nil
       flash[:notice] = "logged out"

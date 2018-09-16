@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
   end
 
   def create
-    # @comment = Comment.create(comment_params)
     @comment = Comment.new(comment_params)
     @comment.user_id = session[:user_id]
     @postid = params[:id]
@@ -23,10 +22,6 @@ class CommentsController < ApplicationController
       redirect_to '/posts'
     end
   end
-
-  # def edit
-  #   @post = Post.find(params[:id])
-  # end
 
   def edit
     @comment = Comment.find(params[:id])
