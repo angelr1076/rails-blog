@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
     if @comment.save
       flash[:notice] = "comment created."
       redirect_to '/posts'
+      # redirect_to :back, notice: "Comment has been created"
     else
       flash[:error] = "Error creating comment."
       redirect_to '/posts'

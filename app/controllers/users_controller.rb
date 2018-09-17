@@ -1,21 +1,27 @@
 class UsersController < ApplicationController
 #GET /users
 # users#index
-  def index
-    @users = User.all
-  end
+def index
+  @users = User.all
+end
 
-  def your_account
-    user_logged_in
-    @current_user = current_user
-  end
+def your_account
+  user_logged_in
+  @current_user = current_user
+end
 
 # POST /users 
 # users#create
 def create
-  user = User.create(user_params)
+  user = User.new(user_params)
+  if user.save
   flash[:notice] = "User created."
   redirect_to user
+  else
+    flash[:notice] = "There was an error. "
+    flash[:notice] += user.errors.full_messages.join(', ')
+    redirect_to new_user_path
+  end
 end
 
   # GET /users/new
@@ -28,6 +34,7 @@ end
   # users#edit
   def edit
     @user = User.find(params[:id])
+    # render posts_path
   end
 
   #GET /users/:id
@@ -40,10 +47,17 @@ end
   # users#update
   def update
     user = User.find(params[:id])
-    user.update(user_params)
-    flash[:notice] = "User updated."
-    redirect_to user
+    if user.update(user_params)
+      flash[:notice] = "User updated."
+      redirect_to user
+    else
+      flash[:notice] = "Update failed. "
+      flash[:notice]  += user.errors.full_messages.join(', ')
+      redirect_to edit_user_path(user)
+      # redirect_to_fallback()
+      # redirect_back(fallback_location: root_path)
   end
+end
 
   #DELETE /users/:id
   # users#destroy
