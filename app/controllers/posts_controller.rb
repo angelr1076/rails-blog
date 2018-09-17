@@ -67,12 +67,19 @@ end
     redirect_to posts_path
   end
 
-  def check_auth
-    if session[:user_id] != @post.user_id
-      flash[:notice] = "You can't edit this post"
-      redirect_to posts_path
+  def current_user
+    if session[:user_id]
+        User.find(session[:user_id])
+    end
   end
-end
+  
+  def user_logged_in
+    if session[:user_id]
+      flash[:notice] = "Welcome!"
+    else redirect_to '/'
+      flash[:notice] = "This is not your account to edit."
+    end
+  end
 
   private 
   

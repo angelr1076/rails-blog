@@ -5,6 +5,11 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def your_account
+    user_logged_in
+    @current_user = current_user
+  end
+
 # POST /users 
 # users#create
 def create
@@ -53,6 +58,20 @@ end
       session[:user_id] = nil
     flash[:notice] = "User deleted."
     redirect_to users_path
+  end
+end
+
+def current_user
+  if session[:user_id]
+      User.find(session[:user_id])
+  end
+end
+
+def user_logged_in
+  if session[:user_id]
+    flash[:notice] = "Welcome!"
+  else redirect_to '/'
+    flash[:notice] = "This is not your account to edit."
   end
 end
 
