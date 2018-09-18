@@ -41,13 +41,6 @@ class CommentsController < ApplicationController
     redirect_to '/posts'
   end
 
-#   def check_auth
-#     if session[:user_id] != @post.user_id
-#       flash[:notice] = "You can't edit this comment"
-#       redirect_to posts_path
-#   end
-# end
-
   private 
   
     def comment_params

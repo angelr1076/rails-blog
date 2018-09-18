@@ -3,10 +3,10 @@
 <div id="user-show">
     <h2>Username - <%= @user.username %> </h2>
     
-    <%#<% if current_user && current_user.id == @user.username %>
+    <% if current_user && current_user.id == @user.id %>
     <%= link_to("Edit User", edit_user_path(@user)) %>
     </br>
     <%= link_to("Delete User", @user, method: 'delete') %>
-    <%#<% end %>
+    <% end %>
     
 </div>
