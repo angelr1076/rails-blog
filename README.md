@@ -1,6 +1,6 @@
 # README
 
-Welcome to Dogga-Blogga! A place where pets can gripe about their owners and what's new in the neighborhood. 
+Welcome to Doggie-Bloggie! A place where pets can gripe about their owners and what's new in the neighborhood. 
 
 Create dog users, edit them or delete them from the database.
 
@@ -28,3 +28,6 @@ Feel free to play around and have fun with the site. You can view some of the si
 rails s
 localhost:3000
 * ...
+
+Username: guest, 
+Password: guestpass
