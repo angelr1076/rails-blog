@@ -21,7 +21,7 @@ end
     @post.user_id = session[:user_id]
     if @post.save
       flash[:notice] = "Post created."
-      redirect_to '/posts'
+      redirect_to posts_path
       # redirect_to :back, notice: "Post has been created"
     else
       flash[:error] = "Error creating post."
