@@ -31,4 +31,5 @@ rails s
 localhost:3000
 * ...
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1540985055/doggie-bloggie.png)
+![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544065662/Screen_Shot_2018-12-05_at_10.07.17_PM.png)
 
