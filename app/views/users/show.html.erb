@@ -4,15 +4,16 @@
     <h2>Username - <%= @user.username %> </h2>
     <hr>
         <% @user.posts.reverse.each do |post| %>
-        <p>Created: <%= post.user.created_at %>
-        <p>Blog Post: <%= link_to(post.body, post) %> </p>
-        <p>By: <%= post.user.username %>  </p>
+        <h5>Created: <%= post.user.created_at %></h5>
+        <h5>Blog Post: <%= link_to(post.body, post) %> </h5>
+        <h5>By: <%= post.user.username %>  </h5>
+   
     <hr>
       <% end %>
     <% if current_user && current_user.id == @user.id %>
-    <%= link_to("Edit User", edit_user_path(@user)) %>
+    <%= link_to "Edit User", edit_user_path(@user) %>
     </br>
-    <%= link_to("Delete User", @user, method: 'delete') %>
+    <%= link_to "Delete User", @user, method: 'delete' %>
     <% end %>
     
 </div>
