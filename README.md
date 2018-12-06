@@ -31,6 +31,6 @@ Feel free to play around and have fun with the site. You can view some of the si
 
 rails s
 localhost:3000
-* ...
+
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544065662/Screen_Shot_2018-12-05_at_10.07.17_PM.png)
 
