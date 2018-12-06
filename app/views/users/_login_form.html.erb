@@ -1,10 +1,27 @@
 <%# create a new user or edit user %>
-<div id="user-form">
-    <%= form_for @user do |f| %>
-        <%= f.label :username %>
-        <%= f.text_field :username %>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-        <%= f.submit %>
-    <% end %>
+<div class="container-fluid">
+    <div id="user-form">
+    <h1>New Pup Registration</h1>
+        <%= form_for @user do |f| %>
+        <div class="user">
+                <%= f.label :username %>
+            </br>
+                <%= f.text_field :username %>
+            </br>
+        </div>
+        <div class="password">
+                <%= f.label :password %>
+            </br>
+                <%= f.password_field :password %>
+            </br>
+                <%= f.label :password_confirmation %>
+            </br>
+                <%= f.password_field :password_confirmation %>
+            </br>
+        </div>
+        <button>
+            <h2>Submit <%= f.submit %> </h2>
+        </button>
+        <% end %>
+    </div>
 </div>

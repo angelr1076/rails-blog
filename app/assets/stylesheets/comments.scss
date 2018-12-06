@@ -1,3 +1,9 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#single-comment {
+    border: 5px dotted black;
+    background: rgb(42, 106, 167);
+    width: 500px;
+    margin-left: 25%;
+}
