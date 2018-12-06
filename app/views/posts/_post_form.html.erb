@@ -1,9 +1,12 @@
 <%# login/edit template %>
 <div id="post-form">
     <%= form_for @post do |f| %>
-        <%= f.label :body %>
+        <h3><%= f.label :Add_post %></h3>
+        <hr>
         <%= f.text_area :body, class: "text-area" %>
         </br>
-        <%= f.submit %>
+        <button>
+            <h2>Submit <%= f.submit %> </h2>
+        </button>
     <% end %>
 </div>

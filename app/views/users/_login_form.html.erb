@@ -6,17 +6,17 @@
         <div class="user">
                 <%= f.label :username %>
             </br>
-                <%= f.text_field :username %>
+                <%= f.text_field :username, placeholder: 'puppy@pupmail.com' %>
             </br>
         </div>
         <div class="password">
                 <%= f.label :password %>
             </br>
-                <%= f.password_field :password %>
+                <%= f.password_field :password, placeholder: 'password' %>
             </br>
                 <%= f.label :password_confirmation %>
             </br>
-                <%= f.password_field :password_confirmation %>
+                <%= f.password_field :password_confirmation, placeholder: 're-enter password' %>
             </br>
         </div>
         <button>
