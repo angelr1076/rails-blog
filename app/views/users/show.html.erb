@@ -4,6 +4,7 @@
     <h2>Username - <%= @user.username %> </h2>
     <hr>
         <% @user.posts.reverse.each do |post| %>
+        <p>Created: <%= post.user.created_at %>
         <p>Blog Post: <%= link_to(post.body, post) %> </p>
         <p>By: <%= post.user.username %>  </p>
     <hr>

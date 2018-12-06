@@ -10,16 +10,22 @@
         <%= link_to("Delete Post", @post, method: 'delete') %>
         </br>
         <% end %>
-        <%= link_to("Add Comment", new_comment_path(post_id: @post.id)) %>
+        <h4><% if session[:user_id] %></h4>
+          <h3 id="logged-in"> <%= User.find(session[:user_id]).username %></h3>
+            <%= link_to("Add Comment", new_comment_path(post_id: @post.id)) %>
+          <% else %>
+          <h4 id="logged-out"> Please login to leave a comment </h4>
+        <% end %>
 </div>
 
 
     <h3><% @post.comments.reverse.each do |c| %> </h3> 
             <div id="single-comment">
-                <h4>Comment</h4>
-                <h5>From - <%= c.user.username %></h5>
+                <h4>Created: <%= c.user.created_at %></h4>
+                <h5>Comment</h5>
+                <h3>From - <%= c.user.username %></h3>
 
-                <h6><%= c.body %> </h6>
+                <h3><%= c.body %> </h3>
 
                 </br>
 
