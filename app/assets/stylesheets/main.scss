@@ -2,8 +2,9 @@ body {
     margin-left: 15% !important;
     margin-right: 20% !important;
     width: 990px;
-    background: url("https://res.cloudinary.com/angelrodriguez/image/upload/v1537011402/doggies.jpg");
-    background-size: cover;
+    background: url("https://res.cloudinary.com/angelrodriguez/image/upload/c_crop,h_1000,w_1000,y_0/v1544124499/cartoon-dogs-vector-432614.jpg");
+    background-size: contain;
+    overflow: hidden;
     cursor: pointer;
 }
 
