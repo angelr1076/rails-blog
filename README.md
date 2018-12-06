@@ -30,5 +30,5 @@ Feel free to play around and have fun with the site. You can view some of the si
 rails s
 localhost:3000
 * ...
-![ScreenShot](/images/doggie-bloggie.png)
+![ScreenShot](app/assets/images/doggie-bloggie.png)
 
