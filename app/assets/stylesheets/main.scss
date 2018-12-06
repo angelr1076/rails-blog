@@ -23,6 +23,11 @@ body {
     margin-right: 13%;
 }
 
+hr {
+    height: 20px !important;
+    color: blue !important;
+}
+
 #sign-in,#comment-form, #edit-comment-form, #post-form, #user-show, #blog-posts, #login-message, nav {
     border: 7px solid black;
     background: rgb(18, 230, 11);
@@ -33,6 +38,10 @@ body {
     margin-left: 25%;
     text-align: center;
     box-shadow: 4px 5px 3px rgb(128, 126, 126);
+}
+
+#user-show {
+    background-color: rgb(247, 20, 255);
 }
 
 #sign-in {
