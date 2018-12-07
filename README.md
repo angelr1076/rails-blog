@@ -7,12 +7,13 @@ Password: guestpass
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544124872/Screen_Shot_2018-12-06_at_2.33.27_PM.png)
 
 
-Create dog users, edit them or delete them from the database.
+Create users, edit them or delete them from the database.
 
 CRUD all users/posts and comments on posts.
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544199402/Screen_Shot_2018-12-07_at_11.11.25_AM.png)
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544199402/Screen_Shot_2018-12-07_at_11.07.28_AM.png)
 
+Styling is built completely library free with no frameworks. 
 
 Feel free to play around and have fun with the site. You can view some of the silly posts and comments my pets exchanged in the database. 
 
