@@ -1,10 +1,21 @@
+:root {
+    --vt-font: 'VT323', monospace;
+    --nova-font: 'Nova Mono', monospace;
+    --audio-font: 'Audiowide', cursive;   
+}
+
+* {
+    text-decoration: none;
+}
+
 body {
-    margin-left: 15% !important;
-    margin-right: 20% !important;
+    margin-left: 15%;
+    margin-right: 20%;
     width: 990px;
+    font-family: var(--audio-font);
+    font-size: 1.2em;
     background: url("https://res.cloudinary.com/angelrodriguez/image/upload/c_crop,h_1000,w_1000,y_0/v1544124499/cartoon-dogs-vector-432614.jpg");
     background-size: contain;
-    overflow: hidden;
     cursor: pointer;
 }
 
@@ -25,8 +36,9 @@ body {
 }
 
 hr {
-    height: 20px !important;
-    color: blue !important;
+    height: 10px;
+    background-color: rgb(8, 8, 8);
+    border: none;
 }
 
 #sign-in,#comment-form, #edit-comment-form, #post-form, #user-show, #blog-posts, #login-message, nav {
@@ -65,6 +77,13 @@ hr {
     background: orange;
 }
 
+#single-comment {
+    border: 5px dotted black;
+    background: rgb(42, 106, 167);
+    width: 500px;
+    margin-left: 25%;
+}
+
 li, .nav-link {
     list-style-type: none;
     text-decoration: none;
@@ -94,8 +113,7 @@ button {
 }
 
 a {
-    color: rgb(95, 6, 6) !important;
-    // background: rgb(113, 113, 156);
+    color: rgb(95, 6, 6);
 }
 
 .all-posts, #all-users, #single-post, #single-comment, #user-form {

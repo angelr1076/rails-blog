@@ -6,11 +6,12 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Nova+Mono|VT323" rel="stylesheet">
     <%= favicon_link_tag asset_path('dog.png') %>
   </head>
 
   <body>
+  <div class="container">
       <div id="login-message">
         <h4><% if session[:user_id] %></h4>
           <h3 id="logged-in"> <%= User.find(session[:user_id]).username %>, you are currently signed in </h3>
@@ -22,11 +23,16 @@
         <nav class="nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/posts">Posts</a>
-          <a class="nav-link" href="/signin">Sign In</a>
-          <a class="nav-link" href="/signout">Sign Out</a>
+          <% if !session[:user_id] %>
+            <a class="nav-link" href="/signin">Sign In</a>
+          <% end %>
+          <% if session[:user_id] %>
+            <a class="nav-link" href="/signout">Sign Out</a>
+          <% end %>
         </nav>
       </br>
       <div id="flash-notice"><%= flash[:notice] if flash[:notice] %></div>
       <%= yield %>
+  </div>
   </body>
 </html>
