@@ -13,7 +13,7 @@ CRUD all users/posts and comments on posts.
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1540985055/doggie-bloggie.png)
 
 
-Feel free to play around and have fun with the site. You can view some of the silly posts and comments our pets exchanged in the database. 
+Feel free to play around and have fun with the site. You can view some of the silly posts and comments my pets exchanged in the database. 
 
 * Ruby version
 2.5.1
