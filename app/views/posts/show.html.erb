@@ -11,7 +11,6 @@
             </br>
         <% end %>
         <h4><% if session[:user_id] %></h4>
-                <h3 id="logged-in"> <%= User.find(session[:user_id]).username %></h3>
                 <%= link_to("Add Comment", new_comment_path(post_id: @post.id)) %>
             <% else %>
                 <h4 id="logged-out"> Please login to leave a comment </h4>
@@ -22,11 +21,8 @@
     <h3><% @post.comments.reverse.each do |c| %> </h3> 
             <div id="single-comment">
                 <h4>Created: <%= c.user.created_at %></h4>
-                <h5>Comment</h5>
-                <h3>From - <%= c.user.username %></h3>
-
-                <h3><%= c.body %> </h3>
-
+                <h3>Comment - <%= c.body %> </h3>
+                <h4>User - <%= c.user.username %></h4>
                 </br>
 
                 <% if current_user && current_user.id == c.user_id %>
