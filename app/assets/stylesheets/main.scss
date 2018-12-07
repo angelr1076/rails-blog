@@ -9,15 +9,14 @@
 }
 
 body {
-    margin-left: 15%;
-    margin-right: 20%;
+    margin: 0 auto;
     width: 990px;
     font-family: var(--audio-font);
     font-size: 1.2em;
     background: url("https://res.cloudinary.com/angelrodriguez/image/upload/c_crop,h_1000,w_1000,y_0/v1544124499/cartoon-dogs-vector-432614.jpg");
     background-size: contain;
     cursor: pointer;
-}
+} 
 
 #title {
     text-align: center;
