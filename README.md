@@ -4,6 +4,9 @@ Welcome to Doggie-Bloggie! A place where pets can gripe about their owners and w
 Username: guest, 
 Password: guestpass
 
+![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544124872/Screen_Shot_2018-12-06_at_2.33.27_PM.png)
+
+
 Create dog users, edit them or delete them from the database.
 
 CRUD all users/posts and comments on posts.
