@@ -25,6 +25,12 @@ Feel free to play around and have fun with the site. You can view some of the si
 
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544199402/Screen_Shot_2018-12-07_at_11.09.18_AM.png)
 
+You can also download the zipfile from the command line by running
+
+git clone git@github.com:angelr1076/rails-doggie-blog.git
+
+Run rails s, rails server or rackup to run locally after cloning from the root folder
+
 * Ruby version
 2.5.1
 
