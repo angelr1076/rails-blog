@@ -2,9 +2,13 @@
 <div id="title">
   <h1>Doggie-Bloggie ®</h1>
     <h4>Where dogs go to gossip about their owners</h4>
+    <% if !session[:user_id] %>
       <p>
         <%= link_to('Create User', new_user_path)%>
       </p>
+    <% else %>
+    <p>To create a new user, you must be logged out</p>
+    <% end %>
 </div>
 <div id="all-users">
   <h3>All users:</h3>
