@@ -25,30 +25,16 @@ Feel free to play around and have fun with the site. You can view some of the si
 
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544199402/Screen_Shot_2018-12-07_at_11.09.18_AM.png)
 
-You can also download the zipfile from the command line by running
+You can also download the zipfile if you'd like to clone the project by running these commands from the command line:
 
 git clone git@github.com:angelr1076/rails-doggie-blog.git
 
-Run rails s, rails server or rackup to run locally after cloning from the root folder
+Type 'rails s' or 'rails server' to run locally after cloning from the root folder
+
+Go to your web browser and type in https://localhost:3000
 
 * Ruby version
 2.5.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-rails s
-localhost:3000
 
 
