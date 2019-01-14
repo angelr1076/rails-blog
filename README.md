@@ -25,7 +25,7 @@ Feel free to play around and have fun with the site. You can view some of the si
 
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544199402/Screen_Shot_2018-12-07_at_11.09.18_AM.png)
 
-![Settings Window](/images/screen1)
+![Settings Window](app/assets/images/screen1)
 ![Settings Window](/images/screen2)
 ![Settings Window](/images/screen3)
 
