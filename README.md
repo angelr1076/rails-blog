@@ -26,8 +26,8 @@ Feel free to play around and have fun with the site. You can view some of the si
 ![Settings Window](https://res.cloudinary.com/angelrodriguez/image/upload/v1544199402/Screen_Shot_2018-12-07_at_11.09.18_AM.png)
 
 ![Settings Window](./app/assets/images/screen1.png)
-![Settings Window](/images/screen2)
-![Settings Window](/images/screen3)
+![Settings Window](./app/assets/images/screen2.png)
+![Settings Window](./app/assets/images/screen3.png)
 
 You can also download the zipfile if you'd like to clone the project by running these commands from the command line:
 
